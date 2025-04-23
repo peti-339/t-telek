@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Lista Elemzes"/>
+        <attribute name="authors" value="Claude"/>
+        <attribute name="about" value="Python kod atiras Flowgorithm formaba"/>
+        <attribute name="saved" value="2025-04-23 08:55:24 du."/>
+        <attribute name="created" value="2025-04-23 11:00:00 AM"/>
+        <attribute name="edited" value="2025-04-23 12:00:00 PM"/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLVU5OEYzTkw7MjAyNS0wNC0yMzswODo1NToyNCBkdS47MTsyOTcx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lista" type="Integer" array="True" size="30"/>
+            <declare name="maxErtek" type="Integer" array="False" size=""/>
+            <declare name="minErtek" type="Integer" array="False" size=""/>
+            <declare name="osszeg" type="Integer" array="False" size=""/>
+            <declare name="db" type="Integer" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="szam" type="Integer" array="False" size=""/>
+            <assign variable="lista[0]" expression="339"/>
+            <assign variable="lista[1]" expression="63"/>
+            <assign variable="lista[2]" expression="231"/>
+            <assign variable="lista[3]" expression="840"/>
+            <assign variable="lista[4]" expression="315"/>
+            <assign variable="lista[5]" expression="985"/>
+            <assign variable="lista[6]" expression="752"/>
+            <assign variable="lista[7]" expression="986"/>
+            <assign variable="lista[8]" expression="880"/>
+            <assign variable="lista[9]" expression="218"/>
+            <assign variable="lista[10]" expression="97"/>
+            <assign variable="lista[11]" expression="403"/>
+            <assign variable="lista[12]" expression="669"/>
+            <assign variable="lista[13]" expression="94"/>
+            <assign variable="lista[14]" expression="67"/>
+            <assign variable="lista[15]" expression="199"/>
+            <assign variable="lista[16]" expression="819"/>
+            <assign variable="lista[17]" expression="813"/>
+            <assign variable="lista[18]" expression="662"/>
+            <assign variable="lista[19]" expression="445"/>
+            <assign variable="lista[20]" expression="242"/>
+            <assign variable="lista[21]" expression="625"/>
+            <assign variable="lista[22]" expression="537"/>
+            <assign variable="lista[23]" expression="892"/>
+            <assign variable="lista[24]" expression="390"/>
+            <assign variable="lista[25]" expression="348"/>
+            <assign variable="lista[26]" expression="484"/>
+            <assign variable="lista[27]" expression="862"/>
+            <assign variable="lista[28]" expression="620"/>
+            <assign variable="lista[29]" expression="227"/>
+            <assign variable="maxErtek" expression="lista[0]"/>
+            <for variable="i" start="1" end="29" direction="inc" step="1">
+                <if expression="lista[i] &gt; maxErtek">
+                    <then>
+                        <assign variable="maxErtek" expression="lista[i]"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;A legnagyobb &#233;rt&#233;k: &quot; &amp; maxErtek" newline="True"/>
+            <assign variable="minErtek" expression="lista[0]"/>
+            <for variable="i" start="1" end="29" direction="inc" step="1">
+                <if expression="lista[i] &lt; minErtek">
+                    <then>
+                        <assign variable="minErtek" expression="lista[i]"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;A legkisebb &#233;rt&#233;k: &quot; &amp; minErtek" newline="True"/>
+            <assign variable="osszeg" expression="0"/>
+            <for variable="i" start="0" end="29" direction="inc" step="1">
+                <assign variable="szam" expression="lista[i]"/>
+                <assign variable="osszeg" expression="osszeg + szam"/>
+            </for>
+            <output expression="&quot;A lista elemeinek &#246;sszege: &quot; &amp; osszeg" newline="True"/>
+            <assign variable="db" expression="0"/>
+            <for variable="i" start="0" end="29" direction="inc" step="1">
+                <assign variable="szam" expression="lista[i]"/>
+                <if expression="szam &gt; 541">
+                    <then>
+                        <assign variable="db" expression="db + 1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;541-nal nagyobb sz&#225;mok sz&#225;ma: &quot; &amp; db" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
